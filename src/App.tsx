@@ -1,23 +1,31 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { useState } from 'react';
 import './App.css';
 
-function App() {
+type TTodo = {
+  title: string;
+  location?: string;
+}
+interface IAppProps {
+  todos: Array<TTodo>;
+}
+
+function App({todos}: IAppProps): JSX.Element {
+  const [items, setItems] = useState<Array<TTodo>>(todos);
+
+  if (!items) {
+    setItems([{title: "This is a stand in todo"}]);
+  }
+  
+  const listOfItems = items.map((item) => {
+    return <p>{item.title}</p>
+  })
+  
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Edit <code>src/App.tsx</code> and save to reload.
+          {listOfItems}
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
       </header>
     </div>
   );
