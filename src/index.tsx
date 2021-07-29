@@ -3,11 +3,10 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import todos from './todoStartList';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App todos={todos}/>
+    <App />
   </React.StrictMode>,
   document.getElementById('root')
 );
