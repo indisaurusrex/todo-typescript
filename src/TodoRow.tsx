@@ -4,9 +4,14 @@ import { TTodo } from './App';
 interface ITodoRowProps {
   item: TTodo;
   handleCheckboxChange: (choice: boolean, id: number) => void;
+  handleRemoveTodo: (id: number) => void;
 }
 
-function TodoRow({ item, handleCheckboxChange }: ITodoRowProps) {
+function TodoRow({
+  item,
+  handleCheckboxChange,
+  handleRemoveTodo,
+}: ITodoRowProps) {
   return (
     <li>
       {item.title}
@@ -17,6 +22,9 @@ function TodoRow({ item, handleCheckboxChange }: ITodoRowProps) {
           handleCheckboxChange(e.target.checked, item.id)
         }
       />
+      <button type="submit" onClick={() => handleRemoveTodo(item.id)}>
+        {` x `}
+      </button>
     </li>
   );
 }

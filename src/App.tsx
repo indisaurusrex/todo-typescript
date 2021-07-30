@@ -32,13 +32,25 @@ function App({ todos }: IAppProps): JSX.Element {
     ]);
   };
 
+  const handleRemoveTodo = (id: number) => {
+    let foundItemIndex = items.findIndex((item) => item.id === id);
+    let updatedItems = [...items];
+    updatedItems.splice(foundItemIndex, 1);
+    setItems(updatedItems);
+  };
+
   const listOfItems = items.map((item) => {
-    return <TodoRow item={item} handleCheckboxChange={handleCheckboxChange} />;
+    return (
+      <TodoRow
+        item={item}
+        handleCheckboxChange={handleCheckboxChange}
+        handleRemoveTodo={handleRemoveTodo}
+      />
+    );
   });
 
   const handleNewTodo = (newTodo: Omit<TTodo, 'id'>) => {
     setItems([...items, { ...newTodo, id: generateId() }]);
-    console.log(items);
   };
 
   return (
