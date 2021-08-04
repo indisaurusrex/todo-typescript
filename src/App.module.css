@@ -1,0 +1,43 @@
+body {
+  margin: 0;
+}
+
+.appHeader {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.app {
+  text-align: center;
+  position: absolute;
+  left: 35%;
+  top: 5em;
+  font-family: 'Roboto', sans-serif;
+}
+
+.root {
+  min-width: 275px;
+}
+
+.cardContainer {
+  box-sizing: border-box;
+  box-shadow: 2px 2px 3px 1px rgb(0 0 0 / 5%), -2px -2px 3px 1px rgb(0 0 0 / 5%),
+    2px -2px 3px 1px rgb(0 0 0 / 5%), -2px 2px 3px 1px rgb(0 0 0 / 5%);
+  width: 500px;
+  height: auto;
+  border: lightblue;
+  padding: 20px;
+  border-radius: 3px;
+}
+
+.ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}

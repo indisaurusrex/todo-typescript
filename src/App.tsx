@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import './App.css';
+// import './App.css';
+import styles from './App.module.css';
 import todoStartList from './todoStartList';
 import AddNewTodo from './AddNewTodo';
 import TodoRow from './TodoRow';
@@ -54,11 +55,13 @@ function App({ todos }: IAppProps): JSX.Element {
   };
 
   return (
-    <div className="App">
-      <header className="App-header">
-        <ul>{listOfItems}</ul>
-        <AddNewTodo handleNewTodo={handleNewTodo} />
-      </header>
+    <div className={styles.app}>
+      <div className={styles.cardContainer}>
+        <header className={styles.root}>
+          <ul className={styles.ul}>{listOfItems}</ul>
+          <AddNewTodo handleNewTodo={handleNewTodo} />
+        </header>
+      </div>
     </div>
   );
 }
