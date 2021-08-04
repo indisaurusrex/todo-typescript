@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 // import './App.css';
 import styles from './App.module.css';
-import todoStartList from './todoStartList';
-import AddNewTodo from './AddNewTodo';
-import TodoRow from './TodoRow';
+import todoStartList from '../../todoStartList';
+import AddNewTodo from '../AddNewTodo/AddNewTodo';
+import TodoRow from '../TodoRow/TodoRow';
 
 type TTodo = {
   id: number;

@@ -1,5 +1,5 @@
 import { ChangeEvent } from 'react';
-import { TTodo } from './App';
+import { TTodo } from '../App/App';
 
 interface ITodoRowProps {
   item: TTodo;

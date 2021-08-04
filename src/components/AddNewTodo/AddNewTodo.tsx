@@ -1,4 +1,4 @@
-import { TTodo } from './App';
+import { TTodo } from '../../App';
 import { useState, ChangeEvent } from 'react';
 
 interface IAddNewTodoProps {
